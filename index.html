@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URLGuard AI | Cyber Attack Detection Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero-header">
+    <nav class="navbar container">
+      <div class="logo">🛡️ URLGuard <span>AI</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#modules">Modules</a></li>
+        <li><a href="#workflow">Workflow</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <a class="btn btn-outline" href="login.html">Login</a>
+        <a class="btn btn-primary" href="signup.html">Get Started</a>
+      </div>
+    </nav>
+
+    <section class="hero container" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">AI-Powered URL Attack Intelligence</p>
+        <h1>Detect, classify, and investigate URL-based cyber attacks in real time.</h1>
+        <p>
+          Build a complete security workflow for typosquatting, SQL injection, XSS, SSRF,
+          command injection, LFI/RFI, brute-force patterns, web-shell uploads, and more.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="dashboard.html">Open Dashboard</a>
+          <a class="btn btn-ghost" href="#modules">View Modules</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Live Detection Coverage</h3>
+        <ul>
+          <li>Typosquatting / URL Spoofing</li>
+          <li>SQL Injection &amp; XSS Variants</li>
+          <li>Directory Traversal &amp; SSRF</li>
+          <li>LFI / RFI &amp; Command Injection</li>
+          <li>HTTP Parameter Pollution &amp; XXE</li>
+        </ul>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section container" id="about">
+      <h2>Project Mission</h2>
+      <p>
+        URLGuard AI is designed to ingest IPDR/PCAP-derived HTTP traffic, detect attack attempts,
+        and separate successful exploit chains from failed probes. It helps SOC teams visualize,
+        query, and export incident intelligence in CSV/JSON.
+      </p>
+    </section>
+
+    <section class="section container" id="modules">
+      <h2>Required Modules</h2>
+      <div class="grid cards-3">
+        <article class="card">
+          <h3>Data Ingestion</h3>
+          <p>Import simulated datasets, external PCAP, and parsed URL logs from multiple sources.</p>
+        </article>
+        <article class="card">
+          <h3>Attack Detection Engine</h3>
+          <p>Detect known and emerging URL attack patterns using rules + ML-assisted classifiers.</p>
+        </article>
+        <article class="card">
+          <h3>Success vs Attempt Classifier</h3>
+          <p>Tag events as attempt/success with confidence scoring and forensic evidence links.</p>
+        </article>
+        <article class="card">
+          <h3>Threat Visualization</h3>
+          <p>Interactive charts for attack type, source IP range, timeline, and severity distribution.</p>
+        </article>
+        <article class="card">
+          <h3>Query &amp; Search Console</h3>
+          <p>Filter by attack family, endpoint, IP/CIDR, time range, and impact indicators.</p>
+        </article>
+        <article class="card">
+          <h3>Export &amp; Reporting</h3>
+          <p>Download findings in CSV/JSON and generate shareable incident reports.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="workflow">
+      <h2>Workflow</h2>
+      <div class="timeline">
+        <div><strong>1.</strong> Generate simulated attacks using SQLMap, Burp Suite, XSStrike, Commix.</div>
+        <div><strong>2.</strong> Ingest packet and log data, normalize URL/request attributes.</div>
+        <div><strong>3.</strong> Detect attack signatures and anomalous URL behavior.</div>
+        <div><strong>4.</strong> Correlate indicators to identify confirmed successful attacks.</div>
+        <div><strong>5.</strong> Investigate and export actionable intelligence for response teams.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-wrap">
+      <p>© 2026 URLGuard AI. Secure HTTP ecosystems through intelligent URL threat analysis.</p>
+      <a href="signup.html">Create Account</a>
+    </div>
+  </footer>
+</body>
+</html>
