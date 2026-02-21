@@ -1,0 +1,137 @@
+:root {
+  --bg: #f3f8ff;
+  --bg-2: #ffffff;
+  --panel: #ffffff;
+  --text: #0f1f46;
+  --muted: #40527f;
+  --primary: linear-gradient(90deg, #1f6dff, #7b3cff);
+  --border: rgba(34, 69, 153, 0.2);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #f9fcff 0%, #edf4ff 100%);
+}
+
+.container { width: min(1120px, 92%); margin: 0 auto; }
+.hero-header { min-height: 100vh; border-bottom: 1px solid var(--border); background: linear-gradient(180deg, #ffffff 0%, #eef5ff 100%); }
+.navbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.1rem 0;
+}
+.logo { font-size: 1.5rem; font-weight: 800; letter-spacing: .4px; }
+.logo span { color: #f45fff; }
+
+.nav-links { display: flex; list-style: none; gap: 1.5rem; padding: 0; }
+.nav-links a { color: var(--text); text-decoration: none; font-weight: 500; opacity: 1; }
+
+.auth-buttons { display: flex; gap: .7rem; }
+.btn {
+  padding: .75rem 1.1rem;
+  border-radius: .6rem;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.btn-primary { background: var(--primary); }
+.btn-outline { border-color: #3559b6; background: #fff; color: #1d3f96; }
+.btn-ghost { background: #eaf1ff; border: 1px solid #bfd1ff; color: #2349aa; }
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 4rem 0 5rem;
+}
+.eyebrow { color: #2f58bd; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+h1 { font-size: clamp(2rem, 4.4vw, 4rem); line-height: 1.08; margin: .4rem 0 1rem; }
+.hero p { color: var(--muted); max-width: 60ch; }
+.hero-cta { margin-top: 1.5rem; display: flex; gap: .8rem; flex-wrap: wrap; }
+
+.hero-card, .card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(27, 61, 138, 0.08);
+}
+.hero-card ul, .list { margin: 0; padding-left: 1.2rem; color: var(--muted); }
+.hero-card li, .list li { margin: .5rem 0; }
+
+.section { padding: 3.4rem 0; }
+.section h2 { font-size: 2rem; margin: 0 0 .9rem; }
+.section p { color: var(--muted); }
+.grid { display: grid; gap: 1rem; margin-top: 1.2rem; }
+.cards-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cards-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cards-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.timeline {
+  display: grid;
+  gap: .75rem;
+}
+.timeline div {
+  background: #f7faff;
+  border: 1px solid var(--border);
+  padding: .8rem 1rem;
+  border-radius: .7rem;
+}
+
+.footer { border-top: 1px solid var(--border); margin-top: 2rem; }
+.footer-wrap {
+  padding: 1.2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer a { color: #2f58bd; text-decoration: none; }
+
+.auth-page { min-height: 100vh; display: grid; place-items: center; background: linear-gradient(180deg, #f8fbff 0%, #edf4ff 100%); }
+.auth-shell {
+  width: min(900px, 92%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.auth-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  display: grid;
+  gap: .85rem;
+}
+label { display: grid; gap: .4rem; font-weight: 500; }
+input {
+  padding: .75rem .85rem;
+  background: #ffffff;
+  color: var(--text);
+  border: 1px solid #b5c8f5;
+  border-radius: .5rem;
+}
+.back-link { color: #315ec7; text-decoration: none; }
+.small { color: var(--muted); font-size: .92rem; }
+.small a { color: #2f58bd; }
+
+.dash-top { border-bottom: 1px solid var(--border); background: #ffffff; }
+.dash-nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+.dash-nav nav { display: flex; gap: 1rem; }
+.dash-nav a { color: #315ec7; text-decoration: none; }
+.metric h3 { font-size: 1.9rem; margin: 0; }
+.muted { color: var(--muted); }
+
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .hero, .cards-3, .cards-4, .cards-2, .auth-shell { grid-template-columns: 1fr; }
+  .footer-wrap { flex-direction: column; gap: .5rem; align-items: start; }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | URLGuard AI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="dash-top">
+    <div class="container dash-nav">
+      <div class="logo">🛡️ URLGuard <span>AI</span></div>
+      <nav>
+        <a href="index.html">Landing</a>
+        <a href="login.html">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Threat Dashboard</h1>
+    <p class="muted">Quick snapshot of URL threat telemetry.</p>
+
+    <section class="grid cards-4 metrics">
+      <article class="card metric"><h3>12,480</h3><p>Total Requests</p></article>
+      <article class="card metric"><h3>1,392</h3><p>Attack Attempts</p></article>
+      <article class="card metric"><h3>186</h3><p>Confirmed Success</p></article>
+      <article class="card metric"><h3>41</h3><p>High Severity Alerts</p></article>
+    </section>
+
+    <section class="grid cards-2">
+      <article class="card">
+        <h3>Top Attack Types</h3>
+        <ul class="list">
+          <li>SQL Injection - 27%</li>
+          <li>XSS - 21%</li>
+          <li>Directory Traversal - 15%</li>
+          <li>SSRF - 13%</li>
+          <li>Command Injection - 9%</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Filter &amp; Export</h3>
+        <p>Query by attack type, source IP/CIDR, status (attempt/success), and time range.</p>
+        <div class="hero-cta">
+          <button class="btn btn-outline">Export CSV</button>
+          <button class="btn btn-outline">Export JSON</button>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
